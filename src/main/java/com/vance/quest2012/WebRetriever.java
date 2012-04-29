@@ -12,7 +12,7 @@ public class WebRetriever {
 
     public WebRetriever(String target) {
         this.target = target;
-        String[] components = target.split(":", 2);
+        String[] components = target.split("://", 2);
         protocol = components[0];
         host = components[1];
     }
