@@ -19,5 +19,6 @@ public class WebRetrieverTest {
 
         Assert.assertNotNull(sut);
         Assert.assertEquals(expectedTarget, sut.getTarget());
+        Assert.assertEquals(expectedProtocol, sut.getProtocol());
     }
 }
