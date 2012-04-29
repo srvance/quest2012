@@ -12,7 +12,7 @@ public class WebRetrieverTest {
 
     public static final String HTTP_PROTOCOL_STRING = "http";
     public static final String SIMPLE_HOST_STRING = "localhost";
-    public static final String SIMPLE_LOCALHOST_TARGET = HTTP_PROTOCOL_STRING + "://" + SIMPLE_HOST_STRING;
+    public static final String SIMPLE_LOCALHOST_TARGET = HTTP_PROTOCOL_STRING + WebRetriever.PROTOCOL_HOST_SEPARATOR + SIMPLE_HOST_STRING;
 
     @Test
     public void testWebRetriever() {

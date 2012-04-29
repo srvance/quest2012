@@ -6,6 +6,7 @@ package com.vance.quest2012;
  * @author srvance
  */
 public class WebRetriever {
+    public static final String PROTOCOL_HOST_SEPARATOR = "://";
     private String target;
     private String protocol;
     private String host;
@@ -20,7 +21,7 @@ public class WebRetriever {
     }
 
     void parseTarget(String target) {
-        String[] components = target.split("://", 2);
+        String[] components = target.split(PROTOCOL_HOST_SEPARATOR, 2);
         protocol = components[0];
         host = components[1];
     }
