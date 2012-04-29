@@ -25,8 +25,13 @@ public class WebRetriever {
             throw new IllegalArgumentException("Target must be defined");
         }
         String[] components = target.split(PROTOCOL_HOST_SEPARATOR, 2);
-        protocol = components[0];
-        host = components[1];
+        if (components.length == 2) {
+            protocol = components[0];
+            host = components[1];
+        } else {
+            protocol = "http";
+            host = components[0];
+        }
     }
 
     public String getTarget() {
