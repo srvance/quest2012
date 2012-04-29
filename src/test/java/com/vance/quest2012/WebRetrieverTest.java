@@ -11,9 +11,11 @@ import org.junit.Test;
 public class WebRetrieverTest {
     @Test
     public void testWebRetriever() {
-        String target = "http://localhost";
-        WebRetriever sut = new WebRetriever(target);
+        String expectedTarget = "http://localhost";
+
+        WebRetriever sut = new WebRetriever(expectedTarget);
+
         Assert.assertNotNull(sut);
-        Assert.assertEquals(target, sut.getTarget());
+        Assert.assertEquals(expectedTarget, sut.getTarget());
     }
 }
