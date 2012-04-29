@@ -19,7 +19,7 @@ public class WebRetriever {
         // Empty
     }
 
-    private void parseTarget(String target) {
+    void parseTarget(String target) {
         String[] components = target.split("://", 2);
         protocol = components[0];
         host = components[1];
