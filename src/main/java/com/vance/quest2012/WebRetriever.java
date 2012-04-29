@@ -7,6 +7,7 @@ package com.vance.quest2012;
  */
 public class WebRetriever {
     private String target;
+    private String protocol;
 
     public WebRetriever(String target) {
         this.target = target;
@@ -14,5 +15,9 @@ public class WebRetriever {
 
     public String getTarget() {
         return target;
+    }
+
+    public String getProtocol() {
+        return protocol;
     }
 }
