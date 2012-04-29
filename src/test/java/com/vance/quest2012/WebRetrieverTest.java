@@ -31,5 +31,7 @@ public class WebRetrieverTest {
     @Test
     public void testParseTarget() {
         WebRetriever sut = new WebRetriever();
+
+        sut.parseTarget(SIMPLE_LOCALHOST_TARGET);
     }
 }
