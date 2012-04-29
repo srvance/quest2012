@@ -44,4 +44,11 @@ public class WebRetrieverTest {
 
         sut.parseTarget(null);
     }
+
+    @Test
+    public void testParseTarget_EmptyTarget() {
+        WebRetriever sut = new WebRetriever();
+
+        sut.parseTarget("");
+    }
 }
