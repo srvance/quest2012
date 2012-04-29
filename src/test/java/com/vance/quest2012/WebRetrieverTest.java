@@ -10,13 +10,12 @@ import org.junit.Test;
  */
 public class WebRetrieverTest {
 
-    public static final String HTTP_PROTOCOL_STRING = "http";
     public static final String SIMPLE_HOST_STRING = "localhost";
-    public static final String SIMPLE_LOCALHOST_TARGET = HTTP_PROTOCOL_STRING + WebRetriever.PROTOCOL_HOST_SEPARATOR + SIMPLE_HOST_STRING;
+    public static final String SIMPLE_LOCALHOST_TARGET = WebRetriever.HTTP_PROTOCOL_STRING + WebRetriever.PROTOCOL_HOST_SEPARATOR + SIMPLE_HOST_STRING;
 
     @Test
     public void testWebRetriever() {
-        String expectedProtocol = HTTP_PROTOCOL_STRING;
+        String expectedProtocol = WebRetriever.HTTP_PROTOCOL_STRING;
         String expectedHost = SIMPLE_HOST_STRING;
         String expectedTarget = SIMPLE_LOCALHOST_TARGET;
 
@@ -34,7 +33,7 @@ public class WebRetrieverTest {
 
         sut.parseTarget(SIMPLE_LOCALHOST_TARGET);
 
-        Assert.assertEquals(HTTP_PROTOCOL_STRING, sut.getProtocol());
+        Assert.assertEquals(WebRetriever.HTTP_PROTOCOL_STRING, sut.getProtocol());
         Assert.assertEquals(SIMPLE_HOST_STRING, sut.getHost());
     }
 
@@ -64,7 +63,7 @@ public class WebRetrieverTest {
         WebRetriever sut = new WebRetriever();
 
         sut.parseTarget(SIMPLE_HOST_STRING);
-        Assert.assertEquals(sut.getProtocol(), HTTP_PROTOCOL_STRING);
+        Assert.assertEquals(sut.getProtocol(), WebRetriever.HTTP_PROTOCOL_STRING);
         Assert.assertEquals(sut.getHost(), SIMPLE_HOST_STRING);
     }
 }

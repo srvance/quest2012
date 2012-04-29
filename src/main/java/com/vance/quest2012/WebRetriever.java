@@ -6,6 +6,7 @@ package com.vance.quest2012;
  * @author srvance
  */
 public class WebRetriever {
+    public static final String HTTP_PROTOCOL_STRING = "http";
     public static final String PROTOCOL_HOST_SEPARATOR = "://";
     private String target;
     private String protocol;
@@ -29,7 +30,7 @@ public class WebRetriever {
             protocol = components[0];
             host = components[1];
         } else {
-            protocol = "http";
+            protocol = HTTP_PROTOCOL_STRING;
             host = components[0];
         }
     }
