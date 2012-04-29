@@ -9,11 +9,16 @@ import org.junit.Test;
  * @author srvance
  */
 public class WebRetrieverTest {
+
+    public static final String HTTP_PROTOCOL_STRING = "http";
+    public static final String SIMPLE_HOST_STRING = "localhost";
+    public static final String SIMPLE_LOCALHOST_TARGET = HTTP_PROTOCOL_STRING + "://" + SIMPLE_HOST_STRING;
+
     @Test
     public void testWebRetriever() {
-        String expectedProtocol = "http";
-        String expectedHost = "localhost";
-        String expectedTarget = expectedProtocol + "://" + expectedHost;
+        String expectedProtocol = HTTP_PROTOCOL_STRING;
+        String expectedHost = SIMPLE_HOST_STRING;
+        String expectedTarget = SIMPLE_LOCALHOST_TARGET;
 
         WebRetriever sut = new WebRetriever(expectedTarget);
 
