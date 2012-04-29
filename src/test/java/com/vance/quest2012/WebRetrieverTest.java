@@ -22,4 +22,9 @@ public class WebRetrieverTest {
         Assert.assertEquals(expectedProtocol, sut.getProtocol());
         Assert.assertEquals(expectedHost, sut.getHost());
     }
+
+    @Test
+    public void testParseTarget() {
+        WebRetriever sut = new WebRetriever();
+    }
 }
