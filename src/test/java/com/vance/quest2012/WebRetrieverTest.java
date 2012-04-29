@@ -38,7 +38,7 @@ public class WebRetrieverTest {
         Assert.assertEquals(SIMPLE_HOST_STRING, sut.getHost());
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testParseTarget_NullTarget() {
         WebRetriever sut = new WebRetriever();
 
