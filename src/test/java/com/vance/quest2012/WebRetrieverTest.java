@@ -58,4 +58,11 @@ public class WebRetrieverTest {
 
         sut.parseTarget(" ");
     }
+
+    @Test
+    public void testParseTarget_NoProtocolHostSeparator() {
+        WebRetriever sut = new WebRetriever();
+
+        sut.parseTarget(SIMPLE_HOST_STRING);
+    }
 }
