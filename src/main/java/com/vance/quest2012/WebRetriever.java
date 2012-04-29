@@ -9,6 +9,7 @@ public class WebRetriever {
     private String target;
 
     public WebRetriever(String target) {
+        this.target = target;
     }
 
     public String getTarget() {
