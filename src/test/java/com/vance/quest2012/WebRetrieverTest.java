@@ -64,5 +64,7 @@ public class WebRetrieverTest {
         WebRetriever sut = new WebRetriever();
 
         sut.parseTarget(SIMPLE_HOST_STRING);
+        Assert.assertEquals(sut.getProtocol(), HTTP_PROTOCOL_STRING);
+        Assert.assertEquals(sut.getHost(), SIMPLE_HOST_STRING);
     }
 }
