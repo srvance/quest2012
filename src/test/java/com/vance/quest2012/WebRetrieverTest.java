@@ -61,9 +61,11 @@ public class WebRetrieverTest {
     @Test
     public void testParseTarget_NoProtocolHostSeparator() {
         WebRetriever sut = new WebRetriever();
+        String expectedHost = SIMPLE_HOST_STRING;
 
-        sut.parseTarget(SIMPLE_HOST_STRING);
+        sut.parseTarget(expectedHost);
+
         Assert.assertEquals(WebRetriever.HTTP_PROTOCOL_STRING, sut.getProtocol());
-        Assert.assertEquals(SIMPLE_HOST_STRING, sut.getHost());
+        Assert.assertEquals(expectedHost, sut.getHost());
     }
 }
