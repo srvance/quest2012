@@ -21,6 +21,9 @@ public class WebRetriever {
     }
 
     void parseTarget(String target) {
+        if (target == null) {
+            throw new IllegalArgumentException("Target must be defined");
+        }
         String[] components = target.split(PROTOCOL_HOST_SEPARATOR, 2);
         protocol = components[0];
         host = components[1];
