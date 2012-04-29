@@ -11,7 +11,9 @@ import org.junit.Test;
 public class WebRetrieverTest {
     @Test
     public void testWebRetriever() {
-        String expectedTarget = "http://localhost";
+        String expectedProtocol = "http";
+        String expectedHost = "localhost";
+        String expectedTarget = expectedProtocol + "://" + expectedHost;
 
         WebRetriever sut = new WebRetriever(expectedTarget);
 
