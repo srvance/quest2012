@@ -14,5 +14,6 @@ public class WebRetrieverTest {
         String target = "http://localhost";
         WebRetriever sut = new WebRetriever(target);
         Assert.assertNotNull(sut);
+        Assert.assertEquals(target, sut.getTarget());
     }
 }
