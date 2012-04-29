@@ -11,6 +11,8 @@ public class WebRetriever {
 
     public WebRetriever(String target) {
         this.target = target;
+        String[] components = target.split(":", 2);
+        protocol = components[0];
     }
 
     public String getTarget() {
