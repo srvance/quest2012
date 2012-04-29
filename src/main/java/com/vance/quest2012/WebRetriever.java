@@ -6,6 +6,12 @@ package com.vance.quest2012;
  * @author srvance
  */
 public class WebRetriever {
+    private String target;
+
     public WebRetriever(String target) {
+    }
+
+    public String getTarget() {
+        return target;
     }
 }
