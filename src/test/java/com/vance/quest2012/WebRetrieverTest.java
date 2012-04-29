@@ -52,7 +52,7 @@ public class WebRetrieverTest {
         sut.parseTarget("");
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testParseTarget_WhitespaceTarget() {
         WebRetriever sut = new WebRetriever();
 
