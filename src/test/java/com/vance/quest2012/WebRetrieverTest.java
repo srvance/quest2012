@@ -51,4 +51,11 @@ public class WebRetrieverTest {
 
         sut.parseTarget("");
     }
+
+    @Test
+    public void testParseTarget_WhitespaceTarget() {
+        WebRetriever sut = new WebRetriever();
+
+        sut.parseTarget(" ");
+    }
 }
